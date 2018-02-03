@@ -19,3 +19,27 @@ services:
 
     # the default command unless we pass it one
     command: nodemon .
+
+  
+  mysqlDb:
+    # Official MySQL docker image
+    image: mysql:5.6
+
+    # Required variables for the official MySQL image
+    environment:
+      MYSQL_ROOT_PASSWORD: "${DB_ROOT}"
+      MYSQL_DATABASE: "${DB_NAME}"
+      MYSQL_USER: "${DB_USER}"
+      MYSQL_PASSWORD: "${DB_PWD}"
+
+    # Keep it mapped to the usual MySQL port
+    ports:
+      - 3306:3306
+
+    # Create a separate volume on our machine to map to the container's default mysql data directory
+    volumes:
+      - strongloopDev:/var/lib/mysql
+
+# These must be declared to be used above
+volumes:  
+  strongloopDev:
