@@ -2,13 +2,15 @@
   "name": "webmane-api",
   "version": "1.0.0",
   "description": "webmane API",
-  "main": "index.js",
+  "main": "/server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "sjbavier <sjbavier@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "async": "^2.6.0",
     "loopback-cli": "^4.1.0"
-  }
+  },
+  "repository": "git@github.com:sjbavier/wm-api.git"
 }

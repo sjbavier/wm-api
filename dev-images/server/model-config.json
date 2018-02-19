@@ -40,11 +40,11 @@
     "dataSource": "mysql",
     "public": true
   },
-  "Image": {
+  "Bookmark": {
     "dataSource": "mysql",
     "public": true
   },
-  "Bookmark": {
+  "Image": {
     "dataSource": "mysql",
     "public": true
   }
