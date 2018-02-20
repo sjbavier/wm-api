@@ -50,6 +50,14 @@ $ tar zcf - tobearchived | \
 ssh user@destination_server_ip \
 'tar zxf -'
 ```
+
+Also to untar in particular directory
+```bash
+$ tar zcf - tobearchived | \
+ssh user@destination_server_ip \
+'tar zxf - -C ~/directory'
+```
+
 This will put ‘tobearchived’ in the server’s home directory. It is possible to use the -C option to put the files somewhere else. (The ‘z’ tells tar to use gzip compression. To use bzip2 compressio, replace ‘z’ with ‘j’).
 
 Copying from the server is just like the above, but in reverse:

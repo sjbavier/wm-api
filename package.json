@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "async": "^2.6.0",
+    "bookmarks-to-json-categorization": "^1.1.11",
     "loopback-cli": "^4.1.0"
   },
   "repository": "git@github.com:sjbavier/wm-api.git"

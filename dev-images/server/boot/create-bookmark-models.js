@@ -1,15 +1,15 @@
-var async = require('async');
 
-module.exports = function(app) {
-    // data sources
+// var fs = require('fs');
+// var bookmarksImport = JSON.parse(fs.readFileSync('./server/boot/bookmarks.json', 'utf8'));
 
-    var mysql = app.dataSources.mysql;
+// module.exports = function(app) {
+//     app.dataSources.mysql.automigrate('Bookmark', function(err){
+//         if(err) throw err;
 
-    function createBookmarks(cb){
-        mysql.automigrate('Bookmark', function(err){
-            if(err) return cb(err);
-            var Bookmark = app.models.Bookmark;
-            Bookmark.create()
-        })
-    }
-};
+//         app.models.Bookmark.create(bookmarksImport, function( err, bookmarks){
+//             if(err) throw err;
+
+//             console.log('model created: \n', bookmarks);
+//         });
+//     });
+// };

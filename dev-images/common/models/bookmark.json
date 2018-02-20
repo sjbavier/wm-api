@@ -11,7 +11,7 @@
       "type": "string",
       "required": true
     },
-    "url": {
+    "link": {
       "type": "string",
       "required": true
     },
@@ -29,6 +29,13 @@
       "principalType": "ROLE",
       "principalId": "$everyone",
       "permission": "DENY"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "Read"
     }
   ],
   "methods": {}
